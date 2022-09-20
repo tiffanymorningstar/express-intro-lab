@@ -2,6 +2,14 @@
 
 import express from 'express'
 
+// import the todo data
+import { student } from './data/students-data.js'
+
+
+
+
+
+
 // Create Express app
 
 const app = express()
@@ -29,4 +37,11 @@ app.get('/home', function(req, res) {
 
 app.listen(3000, function() {
   console.log('Listening on port 3000')
+})
+
+
+app.get('/students', function(req, res) {
+  res.render('students/index', {
+    students: students
+  })
 })
