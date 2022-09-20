@@ -3,7 +3,7 @@
 import express from 'express'
 
 // import the todo data
-import { student } from './data/students-data.js'
+import { students } from './data/students-data.js'
 
 
 
@@ -25,7 +25,7 @@ app.set('view engine', 'ejs')
 // Mount routes
 
 app.get('/', function(req, res) {
-  res.send('<h1>hello, friend</h1>')
+  res.redirect('/home')
 })
 
 app.get('/home', function(req, res) {
